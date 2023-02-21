@@ -14,6 +14,8 @@ public:
                 digits[idx] -= 10;
                 ++digits[idx - 1];
             }
+            else
+                break;
         }
         if (digits.front() >= 10)
         {
