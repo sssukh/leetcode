@@ -13,7 +13,7 @@ public:
             current = (left + right) / 2;
             int temp = current * current;
             
-            if (temp<0||temp < current || temp > x)
+            if (temp<0||temp/current < current || temp > x)
             {
                 right = current;
             }
