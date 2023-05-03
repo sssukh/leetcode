@@ -52,26 +52,19 @@ public:
         sort(intervals.begin(), intervals.end());
         for (auto tmp : intervals)
         {
-            bool hit = false;
-            for (int i = 0; i < answer.size(); ++i)
+           
+            if (!answer.empty()&&answer.back()[1] >= tmp[0] && answer.back()[0] <= tmp[1])
             {
-                if (answer[i][1] >= tmp[0] && answer[i][0]<=tmp[1])
-                {
-                    hit = true;
-                    int start, end;
-                    if (answer[i][1] <= tmp[1])
-                        end = tmp[1];
-                    else
-                        end = answer[i][1];
-                    if (answer[i][0] >= tmp[0])
-                        start = tmp[0];
-                    else
-                        start = answer[i][0];
-                    answer[i] = { start,end };
-                    break;
-                }
+                int  end;
+                if (answer.back()[1] <= tmp[1])
+                    end = tmp[1];
+                else
+                    end = answer.back()[1];
+
+                answer.back()[1] = end;
+                
             }
-            if (!hit)
+            else
                 answer.push_back(tmp);
         }
 
