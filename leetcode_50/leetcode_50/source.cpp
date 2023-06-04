@@ -29,3 +29,8 @@ public:
 
     }
 };
+
+int main()
+{
+    cout << "Int Min : " << (INT_MIN) << "\nInt Min abs : " << abs(INT_MIN)<<"\nInt max :  "<<INT_MAX;
+}
