@@ -7,7 +7,6 @@ public:
     vector<int> productExceptSelf(vector<int>& nums) 
     {
         int size = nums.size();
-        vector<int> numsright(size);
         vector<int> numsleft(size);
         vector<int> ans(size);
         int pro = 1;
